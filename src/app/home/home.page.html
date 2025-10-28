@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      As minhas notas
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,42 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">As minhas notas</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+ <ion-segment>
+    <ion-segment-button value="first" content-id="first">
+      <ion-label>TO DO</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="second" content-id="second">
+      <ion-label>DONE</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-segment-view>
+    <ion-segment-content id="first">
+        <ion-content color="light">
+          <ion-list [inset]="true">
+            <ion-item>
+              <ion-label>Levar o carro à inspeção</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Pagar o Moche</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Estudar para a UC de Mobile</ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-segment-content>
+    <ion-segment-content id="second">Second</ion-segment-content>
+  </ion-segment-view>
+
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
 </ion-content>
